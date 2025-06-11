@@ -1,5 +1,172 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+.shadow {
+  -webkit-text-shadow: 2px 2px 0 var(--accent-color-dark-theme);
+  text-shadow: 2px 2px 0 var(--accent-color-dark-theme);
+}
+
 .page {
+  background: var(--bg-image-page) center/cover no-repeat;
+  background-attachment: fixed;
+  padding: 10px;
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: 228px 192px 228px;
+  align-items: center;
+}
+
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  border-top: 1px solid var(--accent-color-dark-theme);
+  border-right: 1px solid var(--accent-color-dark-theme);
+}
+
+.decorated-zone::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 25px;
+  height: 25px;
+  border-left: 1px solid var(--accent-color-dark-theme);
+  border-bottom: 1px solid var(--accent-color-dark-theme);
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+  justify-self: end;
+}
+
+.header__theme-menu-button {
+  background-color: transparent;
+  font-size: var(--text-size-main);
+  border: none;
+  color: var(--accent-color-dark-theme);
+  text-transform: lowercase;
+  margin: 0 8px;
+}
+
+.header__theme-menu-item:hover {
+  outline: 1px solid var(--accent-color-dark-theme);
+}
+
+.header__rec {
+  position: absolute;
+  right: 28px;
+  top: 0;
+  font-size: var(--text-size-main);
+  color: var(--accent-color-dark-theme);
+  font-weight: var(--text-weight-main);
+}
+
+.header__rec::after {
+  content: "";
+  position: absolute;
+  top: 11px;
+  right: -16px;
+  border-radius: 50%;
+  width: 3px;
+  height: 3px;
+  background-color: #ff0070;
+  box-shadow: 0 0 4px 5px;
+}
+
+.header__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color-dark-theme);
+  font-weight: var(--text-weight-title);
+  line-height: 82.5%;
+  -webkit-text-shadow: 4px 4px 0 var(--accent-color-dark-theme);
+  text-shadow: 4px 4px 0 var(--accent-color-dark-theme);
+}
+
+.title-decor {
+  background-color: var(--accent-color-dark-theme);
+  color: var(--main-color-dark-theme);
+  font-size: var(--text-size-main);
+  font-weight: var(--text-weight-title);
+  height: min-content;
+  line-height: 1.3em;
+}
+
+/* -------------section------------ */
+
+.section {
+  margin-top: 50px;
+}
+
+.section__title {
+  color: var(--accent-color-dark-theme);
+  font-size: var(--text-size-main);
+  line-height: 1.3em;
+}
+
+.card {
+  margin-top: 20px;
+}
+
+.card__title h3 {
+  font-size: var(--text-size-main);
+}
+
+.card__description {
+  margin-top: 10px;
+  font-size: var(--text-size-main);
+  color: var(--description-color);
+  line-height: 1.3em;
+}
+
+/* ------------advice------------- */
+
+.card__subtitle h3 {
+  margin-bottom: 20px;
+  font-weight: var(--text-weight-title);
+  font-size: var(--text-size-main);
+}
+
+.card__title-advice h3 {
+  font-weight: var(--text-weight-main);
+}
+
+/* ------------gallery----------- */
+
+.gallery {
+  display: grid;
+  margin-top: 50px;
+  gap: 10px;
+}
+
+.gallery__title h3 {
+  font-size: var(--text-size-main);
+}
+
+.gallery img {
+  width: 100%;
+}
+
+/* -----------footer------------- */
+
+.footer {
+  margin-top: 50px;
+  position: relative;
+  display: grid;
+  padding-top: 278px;
+  padding-bottom: 273px;
+}
+
+.footer__title {
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  color: var(--title-color-dark-theme);
+  font-weight: var(--text-weight-title);
+  line-height: 82.5%;
 }
