@@ -9,7 +9,12 @@
   background: var(--bg-image-page) center/cover no-repeat;
   background-attachment: fixed;
   padding: 10px;
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 20px;
+  }
 }
 
 .header {
@@ -19,8 +24,14 @@
   align-items: center;
 }
 
+@media (max-width: 768px) {
+  .header {
+    grid-template-rows: 443px 276.84px 442px;
+  }
+}
+
 .decorated-zone::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   right: 0;
@@ -31,7 +42,7 @@
 }
 
 .decorated-zone::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   bottom: 0;
@@ -43,7 +54,7 @@
 
 .header__theme-menu-list {
   display: grid;
-  gap: 10px;
+  gap: 14px;
   justify-self: end;
 }
 
@@ -51,13 +62,23 @@
   background-color: transparent;
   font-size: var(--text-size-main);
   border: none;
+  outline: none;
   color: var(--accent-color-dark-theme);
   text-transform: lowercase;
-  margin: 0 8px;
+  line-height: 1em;
+  padding: 1.5px 13px;
 }
 
-.header__theme-menu-item:hover {
+.header__theme-menu-button_active {
   outline: 1px solid var(--accent-color-dark-theme);
+}
+
+.header__theme-menu-button:hover {
+  outline: 1px solid var(--hover-color-dark-theme);
+}
+
+.header__theme-menu-button:focus-visible {
+  border-bottom: 1px solid var(--accent-color-dark-theme);
 }
 
 .header__rec {
@@ -70,7 +91,7 @@
 }
 
 .header__rec::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 11px;
   right: -16px;
@@ -124,6 +145,14 @@
   font-size: var(--text-size-main);
   color: var(--description-color);
   line-height: 1.3em;
+}
+
+.card__link:hover {
+  border-bottom: 1px solid var(--description-color);
+}
+
+.card__link:focus-visible {
+  outline: 1px solid var(--description-color);
 }
 
 /* ------------advice------------- */

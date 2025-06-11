@@ -11,6 +11,7 @@
   --text-weight-title: bold;
   --title-color-dark-theme: #db00ff;
   --text-size-title: 116px;
-  --bg-image-page: url("../images/cover-image-dark.png");
+  --bg-image-page: url('../images/cover-image-dark.png');
   --description-color: #f1b2ce;
+  --hover-color-dark-theme: rgba(255, 0, 112, 0.5);
 }
