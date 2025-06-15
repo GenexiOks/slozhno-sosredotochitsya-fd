@@ -177,7 +177,6 @@
 /*----------------------------------------   Page   ----------------------------------------*/
 
 .page {
-  margin: 0 auto;
   background: var(--bg-image-page) center/cover no-repeat;
   background-attachment: fixed;
   padding: 10px;
