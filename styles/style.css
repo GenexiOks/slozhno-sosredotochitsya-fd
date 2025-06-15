@@ -22,7 +22,7 @@
 /*----------------------------------------   Header   ----------------------------------------*/
 
 .header {
-  height: 100vh;
+  min-height: 100vh;
   position: relative;
   display: grid;
   grid-template-rows: minmax(228px, 1fr) 192px minmax(228px, 1fr);
@@ -186,6 +186,12 @@
   .page {
     padding: 20px;
   }
+}
+
+/*----------------------------------------   Main   ----------------------------------------*/
+
+.main {
+  margin-top: 60px;
 }
 
 /*----------------------------------------   Main-section   ----------------------------------------*/
@@ -386,7 +392,7 @@
 /*----------------------------------------   Footer   ----------------------------------------*/
 
 .footer {
-  height: 100vh;
+  min-height: 100vh;
   margin-top: 50px;
   position: relative;
   display: grid;
