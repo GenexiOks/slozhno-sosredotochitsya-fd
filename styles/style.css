@@ -22,7 +22,6 @@
 /*----------------------------------------   Header   ----------------------------------------*/
 
 .header {
-  min-height: 100vh;
   position: relative;
   display: grid;
   grid-template-rows: minmax(228px, 1fr) 192px minmax(228px, 1fr);
@@ -30,6 +29,7 @@
 
 @media (min-width: 768px) {
   .header {
+    min-height: 100vh;
     grid-template-rows: minmax(443px, 1fr) 99px minmax(443px, 1fr);
   }
 }
@@ -191,7 +191,13 @@
 /*----------------------------------------   Main   ----------------------------------------*/
 
 .main {
-  margin-top: 60px;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .main {
+    margin-top: 60px;
+  }
 }
 
 /*----------------------------------------   Main-section   ----------------------------------------*/
@@ -392,17 +398,17 @@
 /*----------------------------------------   Footer   ----------------------------------------*/
 
 .footer {
-  min-height: 100vh;
   margin-top: 50px;
   position: relative;
   display: grid;
   justify-items: center;
   padding-top: 280px;
-  padding-bottom: 270px;
+  padding-bottom: 268px;
 }
 
 @media (min-width: 768px) {
   .footer {
+    min-height: 100vh;
     margin-top: 80px;
     padding-top: 442px;
     padding-bottom: 442px;

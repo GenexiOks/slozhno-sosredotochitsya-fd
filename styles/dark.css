@@ -13,3 +13,7 @@
   --text-size-title: 116px;
   --bg-image-page: url("../images/cover-image-dark.png");
 }
+
+:root.theme-dark .header__rec {
+  display: block;
+}

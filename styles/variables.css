@@ -19,6 +19,14 @@
   --bg-image-page: url("../images/cover-image-dark.png");
 }
 
-.theme-auto .header__rec {
-  display: none;
+@media (prefers-color-scheme: light) {
+  .theme-auto .header__rec {
+    display: none;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .theme-auto .header__rec {
+    display: block;
+  }
 }

@@ -35,6 +35,6 @@
   }
 }
 
-.header__rec {
+:root.theme-light .header__rec {
   display: none;
 }
