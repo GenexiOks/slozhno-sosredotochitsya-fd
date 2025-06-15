@@ -22,7 +22,7 @@
 /*----------------------------------------   Header   ----------------------------------------*/
 
 .header {
-  height: 100%;
+  height: 100vh;
   position: relative;
   display: grid;
   grid-template-rows: minmax(228px, 1fr) 192px minmax(228px, 1fr);
@@ -177,6 +177,7 @@
 /*----------------------------------------   Page   ----------------------------------------*/
 
 .page {
+  margin: 0 auto;
   background: var(--bg-image-page) center/cover no-repeat;
   background-attachment: fixed;
   padding: 10px;
@@ -386,7 +387,7 @@
 /*----------------------------------------   Footer   ----------------------------------------*/
 
 .footer {
-  height: 100%;
+  height: 100vh;
   margin-top: 50px;
   position: relative;
   display: grid;
