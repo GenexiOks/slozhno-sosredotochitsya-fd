@@ -1,7 +1,9 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
 .header__theme-menu-button_active {
+  height: 1vh;
   pointer-events: none;
+  outline: 1px solid var(--active-color);
 }
 
 /*----------------------------------------   Other-styles   ----------------------------------------*/
@@ -86,10 +88,6 @@
   text-transform: lowercase;
   line-height: 1em;
   padding: 1.5px 13px;
-}
-
-.header__theme-menu-button_active {
-  outline: 1px solid var(--active-color);
 }
 
 .header__theme-menu-button:hover {
@@ -387,6 +385,7 @@
 /*----------------------------------------   Footer   ----------------------------------------*/
 
 .footer {
+  height: 1vh;
   margin-top: 50px;
   position: relative;
   display: grid;
