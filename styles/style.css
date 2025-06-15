@@ -36,7 +36,6 @@
   padding: 10px;
   min-height: 668px;
   height: 100vh;
-  position: relative;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
 }
