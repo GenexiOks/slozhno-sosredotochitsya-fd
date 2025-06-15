@@ -68,7 +68,7 @@
 
 @media (min-width: 1024px) {
   .header__theme-menu-list {
-    gap: 10px;
+    gap: 10pxgit;
     grid-template-columns: repeat(3, 1fr);
     justify-self: center;
     align-self: start;
