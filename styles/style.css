@@ -22,7 +22,6 @@
 /*----------------------------------------   Header   ----------------------------------------*/
 
 .header {
-  min-height: 100vh;
   margin-top: 10px;
   position: relative;
   display: grid;
@@ -32,7 +31,6 @@
 @media (min-width: 768px) {
   .header {
     margin-top: 20px;
-    min-height: 100vh;
     grid-template-rows: minmax(443px, 1fr) 99px minmax(443px, 1fr);
   }
 }
