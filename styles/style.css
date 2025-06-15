@@ -23,6 +23,7 @@
 
 .header {
   margin-top: 10px;
+  min-height: 100vh;
   position: relative;
   display: grid;
   grid-template-rows: minmax(228px, 1fr) auto minmax(228px, 1fr);
