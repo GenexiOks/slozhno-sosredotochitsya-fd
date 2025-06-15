@@ -22,6 +22,7 @@
 /*----------------------------------------   Header   ----------------------------------------*/
 
 .header {
+  margin-top: 10px;
   position: relative;
   display: grid;
   grid-template-rows: minmax(228px, 1fr) 192px minmax(228px, 1fr);
@@ -29,6 +30,7 @@
 
 @media (min-width: 768px) {
   .header {
+    margin-top: 20px;
     min-height: 100vh;
     grid-template-rows: minmax(443px, 1fr) 99px minmax(443px, 1fr);
   }
@@ -179,12 +181,12 @@
 .page {
   background: var(--bg-image-page) center/cover no-repeat;
   background-attachment: fixed;
-  padding: 10px;
+  padding: 0 10px;
 }
 
 @media (min-width: 768px) {
   .page {
-    padding: 20px;
+    padding: 0 20px;
   }
 }
 
