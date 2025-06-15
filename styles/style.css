@@ -22,13 +22,16 @@
 /*----------------------------------------   Header   ----------------------------------------*/
 
 .header {
+  min-height: 100vh;
+  margin-top: 10px;
   position: relative;
   display: grid;
-  grid-template-rows: minmax(228px, 1fr) 192px minmax(228px, 1fr);
+  grid-template-rows: minmax(228px, 1fr) auto minmax(228px, 1fr);
 }
 
 @media (min-width: 768px) {
   .header {
+    margin-top: 20px;
     min-height: 100vh;
     grid-template-rows: minmax(443px, 1fr) 99px minmax(443px, 1fr);
   }
@@ -88,7 +91,7 @@
 
 .header__theme-menu-button_active {
   pointer-events: none;
-  border: 1px solid var(--menu-color);
+  outline: 1px solid var(--menu-color);
 }
 
 .header__theme-menu-button:hover {
@@ -223,7 +226,7 @@
 }
 
 .section__title {
-  color: var(--h3-color);
+  color: var(--h2-color);
   font-size: var(--text-size-main);
   line-height: 1.3em;
 }
