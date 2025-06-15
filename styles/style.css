@@ -22,7 +22,6 @@
 /*----------------------------------------   Header   ----------------------------------------*/
 
 .header {
-  margin-top: 10px;
   position: relative;
   display: grid;
   grid-template-rows: minmax(228px, 1fr) 192px minmax(228px, 1fr);
@@ -30,7 +29,6 @@
 
 @media (min-width: 768px) {
   .header {
-    margin-top: 20px;
     min-height: 100vh;
     grid-template-rows: minmax(443px, 1fr) 99px minmax(443px, 1fr);
   }
@@ -225,7 +223,7 @@
 }
 
 .section__title {
-  color: var(--accent-color);
+  color: var(--h3-color);
   font-size: var(--text-size-main);
   line-height: 1.3em;
 }
