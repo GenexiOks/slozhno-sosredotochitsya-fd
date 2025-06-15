@@ -4,14 +4,21 @@
 */
 
 :root {
-  --accent-color-dark-theme: #ff0070;
+  --accent-color: #ff0070;
+  --title-color: #db00ff;
+  --decor-color: #ff0070;
+  --menu-color: #ff0070;
+  --h3-color: #000028;
+  --active-color: #ff0070;
+  --hover-color: rgba(255, 0, 112, 0.5);
+  --description-color: #f1b2ce;
   --text-size-main: 18px;
   --text-weight-main: normal;
-  --main-color-dark-theme: #000028;
   --text-weight-title: bold;
-  --title-color-dark-theme: #db00ff;
   --text-size-title: 116px;
-  --bg-image-page: url('../images/cover-image-dark.png');
-  --description-color: #f1b2ce;
-  --hover-color-dark-theme: rgba(255, 0, 112, 0.5);
+  --bg-image-page: url("../images/cover-image-dark.png");
+}
+
+.theme-auto .header__rec {
+  display: none;
 }

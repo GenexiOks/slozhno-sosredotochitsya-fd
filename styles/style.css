@@ -1,14 +1,18 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+.header__theme-menu-button_active {
+  pointer-events: none;
+}
+
 /*----------------------------------------   Other-styles   ----------------------------------------*/
 .link-shadow {
-  -webkit-text-shadow: 2px 2px 0 var(--accent-color-dark-theme);
-  text-shadow: 2px 2px 0 var(--accent-color-dark-theme);
+  -webkit-text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 .title-decor {
-  background-color: var(--accent-color-dark-theme);
-  color: var(--main-color-dark-theme);
+  background-color: var(--accent-color);
+  color: var(--h3-color);
   font-size: var(--text-size-main);
   font-weight: var(--text-weight-title);
   height: min-content;
@@ -78,33 +82,33 @@
   font-size: var(--text-size-main);
   border: none;
   outline: none;
-  color: var(--accent-color-dark-theme);
+  color: var(--menu-color);
   text-transform: lowercase;
   line-height: 1em;
   padding: 1.5px 13px;
 }
 
 .header__theme-menu-button_active {
-  outline: 1px solid var(--accent-color-dark-theme);
+  outline: 1px solid var(--active-color);
 }
 
 .header__theme-menu-button:hover {
-  outline: 1px solid var(--hover-color-dark-theme);
+  outline: 1px solid var(--hover-color);
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--accent-color-dark-theme);
+  border-bottom: 1px solid var(--accent-color);
 }
 
 /*----------------------------------------   Header-title   ----------------------------------------*/
 
 .header__title {
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--title-color-dark-theme);
+  color: var(--title-color);
   font-weight: var(--text-weight-title);
   line-height: 82.5%;
-  -webkit-text-shadow: 4px 4px 0 var(--accent-color-dark-theme);
-  text-shadow: 4px 4px 0 var(--accent-color-dark-theme);
+  -webkit-text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-color);
 }
 
 @media (min-width: 768px) {
@@ -133,12 +137,12 @@
   right: 28px;
   top: 0;
   font-size: var(--text-size-main);
-  color: var(--accent-color-dark-theme);
+  color: var(--accent-color);
   font-weight: var(--text-weight-main);
 }
 
 .header__rec::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 11px;
   right: -16px;
@@ -150,25 +154,25 @@
 }
 
 .decorated-zone::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   right: 0;
   width: 25px;
   height: 25px;
-  border-top: 1px solid var(--accent-color-dark-theme);
-  border-right: 1px solid var(--accent-color-dark-theme);
+  border-top: 1px solid var(--decor-color);
+  border-right: 1px solid var(--decor-color);
 }
 
 .decorated-zone::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   width: 25px;
   height: 25px;
-  border-left: 1px solid var(--accent-color-dark-theme);
-  border-bottom: 1px solid var(--accent-color-dark-theme);
+  border-left: 1px solid var(--decor-color);
+  border-bottom: 1px solid var(--decor-color);
 }
 
 /*----------------------------------------   Page   ----------------------------------------*/
@@ -208,7 +212,7 @@
 }
 
 .section__title {
-  color: var(--accent-color-dark-theme);
+  color: var(--accent-color);
   font-size: var(--text-size-main);
   line-height: 1.3em;
 }
@@ -239,19 +243,53 @@
 }
 
 /*----------------------------------------   Wide-section   ----------------------------------------*/
-.section-wide {
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
-}
 
-.section__title-wide {
-  grid-column: 1 / 3;
+.section-wide {
+  grid-template-areas:
+    "title"
+    "card1"
+    "card2"
+    "card3";
 }
 
 @media (min-width: 768px) {
-  .section__title-wide {
-    grid-column: 1 / 1;
+  .section-wide {
+    grid-template-areas:
+      "title . ."
+      "card1 card1 card1"
+      "card2 card2 card2"
+      "card3 card3 card3";
   }
+}
+
+@media (min-width: 1024px) {
+  .section-wide {
+    grid-template-areas:
+      "title . ."
+      "card1 card2 card3";
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-wide {
+    grid-template-columns: repeat(auto-fill, minmax(315px, 1fr));
+  }
+}
+
+.section__title-wide {
+  grid-area: title;
+}
+
+.card-wide1 {
+  grid-area: card1;
+}
+
+.card-wide2 {
+  grid-area: card2;
+}
+
+.card-wide3 {
+  grid-area: card3;
 }
 
 .card__link:hover {
@@ -296,9 +334,23 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 192px 230px 318px;
     grid-template-areas:
-      'sunset sunset ice-cream'
-      'tape books ice-cream'
-      'tape street street';
+      "sunset sunset ice-cream"
+      "tape books ice-cream"
+      "tape street street";
+  }
+
+  @media (min-width: 1024px) {
+    .gallery__images {
+      display: grid;
+      margin-top: 20px;
+      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 260px 315px 433px;
+      grid-template-areas:
+        "sunset sunset ice-cream"
+        "tape books ice-cream"
+        "tape street street";
+    }
   }
 
   .sunset {
@@ -351,9 +403,19 @@
   }
 }
 
+@media (min-width: 1024px) {
+  .footer {
+    margin-top: 80px;
+    padding-top: 299px;
+    padding-bottom: 299px;
+  }
+}
+
 .footer__title {
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  color: var(--title-color-dark-theme);
+  font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  -webkit-text-shadow: 2px 2px 0 var(--accent-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  color: var(--title-color);
   font-weight: var(--text-weight-title);
   line-height: 82.5%;
 }
