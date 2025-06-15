@@ -1,11 +1,5 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-.header__theme-menu-button_active {
-  height: 1vh;
-  pointer-events: none;
-  outline: 1px solid var(--active-color);
-}
-
 /*----------------------------------------   Other-styles   ----------------------------------------*/
 .link-shadow {
   -webkit-text-shadow: 2px 2px 0 var(--accent-color);
@@ -28,6 +22,7 @@
 /*----------------------------------------   Header   ----------------------------------------*/
 
 .header {
+  height: 100%;
   position: relative;
   display: grid;
   grid-template-rows: minmax(228px, 1fr) 192px minmax(228px, 1fr);
@@ -73,6 +68,7 @@
 
 @media (min-width: 1024px) {
   .header__theme-menu-list {
+    gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     justify-self: center;
     align-self: start;
@@ -88,6 +84,11 @@
   text-transform: lowercase;
   line-height: 1em;
   padding: 1.5px 13px;
+}
+
+.header__theme-menu-button_active {
+  pointer-events: none;
+  border: 1px solid var(--menu-color);
 }
 
 .header__theme-menu-button:hover {
@@ -385,7 +386,7 @@
 /*----------------------------------------   Footer   ----------------------------------------*/
 
 .footer {
-  height: 1vh;
+  height: 100%;
   margin-top: 50px;
   position: relative;
   display: grid;
